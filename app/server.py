@@ -9,10 +9,13 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=13Nxml5y0VVrn7J8GjTuxZDO1WwR2YslX'
-export_file_name = 'export.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1OwWH8jr6ThhgnZuq1xZZ_eGjBkm-bVp0'
+export_file_name = 'export_psoriase_ou_dermatite_imagem_nao_selecionada.pkl'
 
-classes = ['macbook', 'notmacbook']
+# export_file_url = 'https://drive.google.com/uc?export=download&id=1wkhKODQuiJ38ORaQqR2LfpbdjXI9sq14'
+# export_file_name = 'export_psoriase_ou_dermatite_imagem_selecionada.pkl'
+
+classes = ['psoriase', 'dermatite']
 path = Path(__file__).parent
 
 app = Starlette()
@@ -26,7 +29,7 @@ async def download_file(url, dest):
             data = await response.read()
             with open(dest, 'wb') as f: f.write(data)
 
-async def setup_learner():
+async def setup_learner():https://drive.google.com/uc?export=download&id=13Nxml5y0VVrn7J8GjTuxZDO1WwR2YslX
     await download_file(export_file_url, path/export_file_name)
     try:
         learn = load_learner(path, export_file_name)
