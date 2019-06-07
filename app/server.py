@@ -9,7 +9,8 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-export_file_url = 'https://drive.google.com/uc?export=download&confirm=zGlK&id=1OwWH8jr6ThhgnZuq1xZZ_eGjBkm-bVp0'
+# export_file_url = 'https://drive.google.com/uc?export=download&confirm=zGlK&id=1OwWH8jr6ThhgnZuq1xZZ_eGjBkm-bVp0'
+export_file_url = 'https://drive.google.com/file/d/1OwWH8jr6ThhgnZuq1xZZ_eGjBkm-bVp0/view?usp=sharing'
 export_file_name = 'export_psoriase_ou_dermatite_imagem_nao_selecionada.pkl'
 
 # export_file_url = 'https://drive.google.com/uc?export=download&id=1wkhKODQuiJ38ORaQqR2LfpbdjXI9sq14'
